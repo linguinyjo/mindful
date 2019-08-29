@@ -24,7 +24,7 @@ passport.use(new GoogleStrategy({
     var user;
     existingUser 
       ? done(null, existingUser)
-      : user = await new User({googleId: profile.id}).save()
+      : user = await new User({googleId: profile.id, experience: 0}).save()
         done(null, user)
   }   
 ))  
