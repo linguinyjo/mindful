@@ -1,8 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import quotes from '../data/quotes'
 
 class Header extends React.Component {
   render() {
+    
+    const quote = quotes[Math.floor(Math.random() * (21 - 1)) + 1] 
+    console.log(quote)
+
     const renderHeader = () => {
       const style = {color: "black", fontWeight: "bold"}
       switch (this.props.authReducer){
@@ -18,7 +23,7 @@ class Header extends React.Component {
       <nav className="container" style={{backgroundColor: "beige", color: "black"}}>
         <div className="nav-wrapper">
           <div className="center" style={{fontFamily: "cursive", fontStyle: "italic"}}>
-            "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment."
+            {quote}
             <ul className="right">
               {renderHeader()}
             </ul>

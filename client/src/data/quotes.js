@@ -1,0 +1,23 @@
+module.exports = [
+  "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+  "I never see what has been done; I only see what remains to be done.",
+  "The past is already gone, the future is not yet here. There’s only one moment for you to live.",
+  "Holding onto anger is like drinking poison and expecting the other person to die.",
+  "What you think, you become. What you feel, you attract. What you imagine, you create.",
+  "There are only two mistakes one can make along the road to truth; not going all the way, and not starting.",
+  "No one saves us but ourselves. No one can and no one may. We ourselves must walk the path.",
+  "If you are quiet enough, you will hear the flow of the universe. You will feel its rhythm. Go with this flow. Happiness lies ahead. Meditation is key.",
+  "Those who are free of resentful thoughts surely find peace.",
+  "Quiet the mind, and the soul will speak.",
+  "Where there is peace and meditation, there is neither anxiety nor doubt.",
+  "The quieter you become the more you can hear.",
+  "Only in my deep meditation do I come to know who I truly am",
+  "The soul loves to meditate, for in contact with the spirit lies its greatest joy.",
+  "While meditating we are simply seeing what the mind has been doing all along.",
+  "If you want to conquer the anxiety of life, live in the moment, live in the breath.",
+  "Meditation is not a means to an end. It is both the means and the end.",
+  "When meditation is mastered, the mind is unwavering like the flame of a candle in a windless place.",
+  "If you cultivate the attitude of indifference towards the mind, gradually you will cease to identify with it.",
+  "You are the knower of knowledge; you perceive perceiving. Come to this place, and see if any questions remain there within you.",
+  "The nature of illusion is that, when you see through it, it disappears."
+]
