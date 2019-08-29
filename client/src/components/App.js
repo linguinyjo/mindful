@@ -6,20 +6,26 @@ import Home from './Home'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
 
+
 class App extends React.Component {
-  
+  state = {
+    refresh: true
+  }
+
   componentDidMount() {
     this.props.fetchUser()
   }
-
-  render(){
+  
+  render() {
+    
+    
     return (
       <div>
         <BrowserRouter>
           <div>
-            <Header />
+            {this.props.authReducer ? <Header /> : null}
             <Route path='/' exact component={Landing} />
-            <Route path ='/home' component={Home} />
+            <Route path ='/home' component={Home}/>
           </div>
         </BrowserRouter>
       </div>
@@ -27,4 +33,9 @@ class App extends React.Component {
   }
 }
 
-export default connect(null, actions) (App);
+
+function mapStateToProps(state){
+  return { authReducer: state.auth }
+}
+
+export default connect(mapStateToProps, actions) (App);

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Button } from '@material-ui/core';
+import { Container, Button } from '@material-ui/core'
 import Buddha from '../art/cartoon_buddha_burned.png'
 
 const Landing = () => {

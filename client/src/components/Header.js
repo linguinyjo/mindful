@@ -16,7 +16,7 @@ class Header extends React.Component {
     }
     return (
       <nav className="container" style={{backgroundColor: "beige", color: "black"}}>
-        <div class="nav-wrapper">
+        <div className="nav-wrapper">
           <div className="center" style={{fontFamily: "cursive", fontStyle: "italic"}}>
             "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment."
             <ul className="right">
