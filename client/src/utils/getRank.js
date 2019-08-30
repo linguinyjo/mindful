@@ -1,18 +1,19 @@
-import expData from '../data/experience'
+import Data from '../data/experience'
 
 export default function(exp){
   let min, max
-  for(let each in Object.values(expData)){
-    min = expData[each][0][0] 
-    max = expData[each][0][1]
+  for(let each in Object.values(Data)){
+    min = Data[each][0][0] 
+    max = Data[each][0][1]
     if(exp >= min && exp <= max) { 
         return {
-          rank: expData[each][1]['rank'],
-          title: expData[each][2],
-          quote: expData[each][3],
-          neededXp: expData[each][4]['req'],
-          currentXp: exp - min
-          
+          rank: Data[each][1]['rank'],
+          title: Data[each][2],
+          quote: Data[each][3],
+          neededXp: Data[each][4]['req'],
+          currentXp: exp - min,
+          image: Data[each][5],
+          style: Data[each][6],      
         }
     }       
   }

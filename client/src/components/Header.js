@@ -6,7 +6,6 @@ class Header extends React.Component {
   render() {
     
     const quote = quotes[Math.floor(Math.random() * (21 - 1)) + 1] 
-    console.log(quote)
 
     const renderHeader = () => {
       const style = {color: "black", fontWeight: "bold"}

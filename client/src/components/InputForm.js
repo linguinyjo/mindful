@@ -2,8 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Form, Field } from 'react-final-form'
 import * as actions from '../actions'
-import axios from 'axios'
-
 
 class InputForm extends React.Component {
   render() {

@@ -8,7 +8,10 @@ function stringToDate(dateString) {
 }
 
 const calcCounter = (dates) => {
-  let counter = 1
+  let counter = 0
+  if(!dates.length) {
+    return  counter
+  }
   let tempDate, nextDate, timeDiff
   dates.forEach(date => {
     nextDate = new Date(stringToDate(date)).getTime()
