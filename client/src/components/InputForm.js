@@ -14,7 +14,7 @@ const composeValidators = (...validators) => value =>
 
 class InputForm extends React.Component {
   render() {
-    const formStyle={width: "35%", border: "3px solid", padding: "100px", backgroundColor: "#FFDAB9"}
+    const formStyle={width: "20%", border: "3px solid", padding: "10px 50px 10px 50px", backgroundColor: "#FFDAB9"}
     return (
       <div style={{marginTop: "50px", marginBottom: "20px"}}>
         <Form
@@ -24,7 +24,7 @@ class InputForm extends React.Component {
           <form className="container" style={formStyle} 
             onSubmit={handleSubmit}
           >
-            <h4 className="center" style={{color: "black", fontStyle: "bold"}}>New Meditation Session</h4>
+            <h5 className="center" style={{color: "black", fontStyle: "bold"}}>Add Session</h5>
             
             <div>
               <Field name="date" validate={composeValidators(required, dateFormat)}>
@@ -56,7 +56,7 @@ class InputForm extends React.Component {
             </div>
             
             <button
-              className="teal btn-flat white-text middle" 
+              className="teal btn-flat white-text center"
               disabled={submitting} 
               type="submit" 
             >
