@@ -11,7 +11,6 @@ const Filler = (props) => {
   }
   return (
     <div style={fillerStyle}>
-
     </div>
   )
 }

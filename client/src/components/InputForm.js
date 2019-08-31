@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Form, Field } from 'react-final-form'
 import * as actions from '../actions'
 
-
 const required = value => (value ? undefined : 'Required')
 const dateFormat = value => (!value.match(/^(0[1-9]|[12][0-9]|3[01])[\- \/.](?:(0[1-9]|1[012])[\- \/.](201)[2-9]{1})$/) ? "must be valid date in format DD/MM/YYYY" : undefined)
 const mustBeNumber = value => (isNaN(value) ? 'Must be a number' : undefined)
@@ -14,7 +13,16 @@ const composeValidators = (...validators) => value =>
 
 class InputForm extends React.Component {
   render() {
-    const formStyle={width: "20%", border: "3px solid", padding: "10px 50px 10px 50px", backgroundColor: "#FFDAB9"}
+    
+    const formStyle= {
+      width: "20%", 
+      border: "3px solid", 
+      padding: "10px 50px 10px 50px", 
+      backgroundColor: "#FFDAB9",
+      position: "absolute", 
+      top: "23rem", 
+      left: "6rem"
+    }
     return (
       <div style={{marginTop: "50px", marginBottom: "20px"}}>
         <Form

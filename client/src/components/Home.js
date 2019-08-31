@@ -33,12 +33,16 @@ class Home extends React.Component {
         <Container maxWidth="xs" style={{backgroundColor: "white", border: "solid", marginTop: "30px"}}>
           <Card />
         </Container>
-        <InputForm 
-          onSubmit={onSubmit}
-        />
+        {this.props.session 
+          ? <InputForm onSubmit={onSubmit}/>
+          : null
+        }
       </div>
     )
   }
 }
 
-export default connect(null, actions)(Home)
+function mapStateToProps({ session }){
+  return { session }
+}
+export default connect(mapStateToProps, actions)(Home)

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { FETCH_USER, PROGRESS_BAR } from './types'
+import { FETCH_USER, PROGRESS_BAR, SHOW_SESSION } from './types'
 
 export const fetchUser = () => async (dispatch) => {
   const res = await axios.get('/api/current_user')
@@ -9,7 +9,7 @@ export const fetchUser = () => async (dispatch) => {
 export const updateXpBar = (percent) => (dispatch) => {
   dispatch({ type: PROGRESS_BAR, payload: percent })
 }
-// export const addSession = (token) => async (dispatch) => {
-//   const res = await axios.post('/api/add_session', token)
-//   dispatch({ type: FETCH_USER, payload: res.data })
-// }
+
+export const showSession = (session) => dispatch => {
+  dispatch({ type: SHOW_SESSION, payload: !session })
+}
