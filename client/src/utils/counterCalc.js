@@ -10,26 +10,37 @@ function stringToDate(dateString) {
 const calcCounter = (dates) => {
   let counter = 0
   if(!dates.length) {
-    return  counter
+
+    return counter
   }
   let tempDate, nextDate, timeDiff
   dates.forEach(date => {
     nextDate = new Date(stringToDate(date)).getTime()
 
-    if(tempDate == undefined){
+    if(tempDate === undefined){
+  
       tempDate = new Date(stringToDate(date))
+      return counter++
     }
-    
+  
     timeDiff = (nextDate - tempDate) / (1000 * 3600 * 24) 
     
-    if(timeDiff <= 1) {
-      counter = counter + 1
+    if(timeDiff === 0) {
+  
+      return counter
+    }
+    if(timeDiff === 1) {
+  
+      counter++
       tempDate = nextDate
+      return counter 
     } 
     
     if(timeDiff > 1){
+  
       counter = 1
       tempDate = nextDate
+      return counter 
     }   
   })
   return counter

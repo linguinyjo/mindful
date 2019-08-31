@@ -4,11 +4,10 @@ import quotes from '../data/quotes'
 
 class Header extends React.Component {
   render() {
-    
+    const style = {color: "black", fontWeight: "bold"}
     const quote = quotes[Math.floor(Math.random() * (21 - 1)) + 1] 
-
+    
     const renderHeader = () => {
-      const style = {color: "black", fontWeight: "bold"}
       switch (this.props.authReducer){
         case null:
           return "null"
@@ -21,13 +20,16 @@ class Header extends React.Component {
     return (
       <nav className="container" style={{backgroundColor: "beige", color: "black"}}>
         <div className="nav-wrapper">
-          <div className="center" style={{fontFamily: "cursive", fontStyle: "italic"}}>
-            {quote}
-            <ul className="right">
-              {renderHeader()}
-            </ul>
-          </div>
+          <ul className="left">
+            <li><a href="/auth/google" style={style}>Home</a></li>
+            <li><a href="/auth/google" style={style}>About</a></li>
+            <li><a href="/auth/google" style={style}>Data</a></li>
+          </ul>
+          <ul className="right">
+            {renderHeader()}
+          </ul>
         </div>
+        <div className="center" style={{fontFamily: "cursive", fontStyle: "italic", fontWeight: "bold", fontSize: "2ch"}}>"{quote}"</div>
       </nav>
     )
   }

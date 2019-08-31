@@ -23,9 +23,10 @@ class App extends React.Component {
       <div>
         <BrowserRouter>
           <div>
-            {this.props.authReducer ? <Header /> : null}
-            <Route path='/' exact component={Landing} />
-            <Route path ='/home' component={Home}/>
+            <Header /> 
+            {this.props.authReducer 
+              ? <Route path='/' exact component={Home} />
+              : <Route path='/' exact component={Landing} />}
           </div>
         </BrowserRouter>
       </div>

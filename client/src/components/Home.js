@@ -4,6 +4,7 @@ import Card from './Card'
 import InputForm from './InputForm'
 import axios from 'axios'
 import * as actions from '../actions'
+import ActionButton from './floatingActionButton'
 import { connect } from 'react-redux'
 
 
@@ -23,7 +24,8 @@ class Home extends React.Component {
       this.props.fetchUser()
     }
     return (
-      <div> 
+      <div>
+        <ActionButton /> 
         <Container maxWidth="xs" style={{backgroundColor: "white", border: "solid", marginTop: "80px"}}>
           <Card />
         </Container>

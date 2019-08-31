@@ -1,9 +1,9 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-const Filler = (props) => {
-  
+const Filler = (props) => {  
   const fillerStyle = {
-    background: "#1DA598",
+    background: "#FFD700",
     height: "100%",
     borderRadius: "inherit",
     transition: "width .2s ease-in",
@@ -21,7 +21,7 @@ const Bar = (props) => {
     position: "relative",
     height: "20px",
     borderRadius: "50px",
-    border: "1px solid #333",
+    border: "2px solid #333",
     marginTop: "20px"
   }
   return (
@@ -35,16 +35,15 @@ const Bar = (props) => {
 }
 
 class Progressbar extends React.Component {
-  state = {
-    percentage: this.props.percentage
-  }
-  componentDidMount(){
-    this.setState({percentage: this.props.percentage})
-  }
   render() {
     return (
-      <Bar percentage={this.state.percentage}/>
+      <Bar percentage={this.props.percent}/>
     )
   }
 }
-export default Progressbar
+
+function mapStateToProps({ percent }) {
+  return { percent }
+}
+
+export default connect(mapStateToProps)(Progressbar)

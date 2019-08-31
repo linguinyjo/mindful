@@ -20,7 +20,11 @@ body {
   border: 1px solid #333
 } 
 
-.filler {
-
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgb(161, 161, 161);
+  font-style: italic
 }
- 
+
+label {
+  color: black;
+}

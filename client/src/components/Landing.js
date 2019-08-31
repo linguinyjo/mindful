@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <div>
       <Container maxWidth='xs'>
-        <div className="landingQuote" style={{padding: "20px", marginTop: "50px"}}>
+        <div className="landingQuote" style={{padding: "20px", marginTop: "60px"}}>
           Buddha was asked, “What have you gained from meditation?” He replied, “Nothing!” Then he continued, “However, let me tell you what I have lost: anger, anxiety, 
           depression, insecurity, and fear of old age and death.”
         </div>

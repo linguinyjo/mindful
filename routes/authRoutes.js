@@ -7,7 +7,7 @@ module.exports = app => {
 
   app.get('/auth/google/callback', passport.authenticate('google'),
     (req, res) => {
-     res.redirect('/home')
+     res.redirect('/')
   })
 
   app.get('/api/current_user', (req, res) => {
