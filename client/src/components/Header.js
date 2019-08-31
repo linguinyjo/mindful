@@ -1,11 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import quotes from '../data/quotes'
 
 class Header extends React.Component {
   render() {
     const style = {color: "black", fontWeight: "bold"}
-    const quote = quotes[Math.floor(Math.random() * (21 - 1)) + 1] 
     
     const renderHeader = () => {
       switch (this.props.authReducer){
@@ -29,7 +27,6 @@ class Header extends React.Component {
             {renderHeader()}
           </ul>
         </div>
-        <div className="center" style={{fontFamily: "cursive", fontStyle: "italic", fontWeight: "bold", fontSize: "2ch"}}>"{quote}"</div>
       </nav>
     )
   }

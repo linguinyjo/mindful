@@ -6,6 +6,7 @@ import axios from 'axios'
 import * as actions from '../actions'
 import ActionButton from './floatingActionButton'
 import { connect } from 'react-redux'
+import { Quote } from './Quote'
 
 
 class Home extends React.Component {
@@ -26,7 +27,10 @@ class Home extends React.Component {
     return (
       <div>
         <ActionButton /> 
-        <Container maxWidth="xs" style={{backgroundColor: "white", border: "solid", marginTop: "80px"}}>
+        <Container style={{marginTop: "30px"}}>
+          <Quote />
+        </Container> 
+        <Container maxWidth="xs" style={{backgroundColor: "white", border: "solid", marginTop: "30px"}}>
           <Card />
         </Container>
         <InputForm 
