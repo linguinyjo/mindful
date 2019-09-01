@@ -1,4 +1,4 @@
-import Data from '../data/experience'
+import Data from '../projectData/experience'
 
 export default function(exp){
   let min, max, currentXp, neededXp, percentage

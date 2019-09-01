@@ -1,5 +1,5 @@
 import React from 'react'
-import quotes from '../data/quotes'
+import quotes from '../projectData/quotes'
 
 export const Quote = () => {
   const quote = quotes[Math.floor(Math.random() * (21 - 1)) + 1] 
