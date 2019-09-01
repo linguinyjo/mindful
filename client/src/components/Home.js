@@ -26,7 +26,6 @@ class Home extends React.Component {
     }
     return (
       <div>
-         
         <Container style={{marginTop: "30px"}}>
           <Quote />
         </Container> 
