@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Form, Field } from 'react-final-form'
-import * as actions from '../actions'
-import { Container } from '@material-ui/core';
+import * as actions from '../../actions'
+import { dateOfToday } from '../../utils/counterCalc'
 
 const required = value => (value ? undefined : 'Required')
 const dateFormat = value => (!value.match(/^(0[1-9]|[12][0-9]|3[01])[\- \/.](?:(0[1-9]|1[012])[\- \/.](201)[2-9]{1})$/) ? "must be valid date in format DD/MM/YYYY" : undefined)
@@ -15,18 +15,19 @@ const composeValidators = (...validators) => value =>
 class InputForm extends React.Component {
   render() {
     const formStyle= {  
-      border: "3px solid", 
+      border: "1px solid", 
       padding: "10px 50px 10px 50px", 
-      backgroundColor: "#FFDAB9",
-      
-  
+      backgroundColor: "#FFDAB9"
     }
+    
+    const today = dateOfToday()
+
     return (
       <div className="center" style={{marginTop: "50px", marginBottom: "20px"}}>
         <Form
           onSubmit={this.props.onSubmit}
-          initialValues={{date: "31/08/2019"}}
-          render={({ handleSubmit, submitting, pristine, form, reset }) => (
+          initialValues={{date: today}}
+          render={({ handleSubmit, submitting }) => (
           <form className="container" style={formStyle} 
             onSubmit={handleSubmit}
           >

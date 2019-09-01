@@ -2,31 +2,42 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import Header from './Header'
 import Landing from './Landing'
-import Home from './Home'
+import Home from './home/Home'
+import Data from './data/Data'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
 
 
 class App extends React.Component {
-  state = {
-    refresh: true
-  }
 
   componentDidMount() {
     this.props.fetchUser()
   }
   
   render() {
-    
+    const showComponents = () => {
+      if(this.props.authReducer) {
+        return (
+          <div>
+          <Route path='/' exact component={Home} />
+          <Route path='/data' exact component={Data} />
+          </div>
+        )}
+      else {
+       return (
+         <div>
+           <Route path='/' exact component={Landing} />
+        </div>
+       ) 
+      }
+    }
     
     return (
       <div>
         <BrowserRouter>
           <div>
             <Header /> 
-            {this.props.authReducer 
-              ? <Route path='/' exact component={Home} />
-              : <Route path='/' exact component={Landing} />}
+            {showComponents()}
           </div>
         </BrowserRouter>
       </div>

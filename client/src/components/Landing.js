@@ -15,7 +15,9 @@ const Landing = () => {
         </div>
         <div className="center" style={{marginTop: "20px", fontStyle: "bold"}}>
           Please login to begin a journey into your mind.
-          <Button href="/auth/google"variant="contained" style={{marginTop: "20px"}}>Login</Button>
+        </div>
+        <div className="center">
+          <Button href="/auth/google" variant="contained" style={{marginTop: "20px"}}>Login</Button>
         </div>
       </Container>
     </div>

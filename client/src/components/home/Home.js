@@ -3,10 +3,10 @@ import { Container } from '@material-ui/core';
 import Card from './Card'
 import InputForm from './InputForm'
 import axios from 'axios'
-import * as actions from '../actions'
+import * as actions from '../../actions'
 import ActionButton from './floatingActionButton'
 import { connect } from 'react-redux'
-import { Quote } from './Quote'
+import { Quote } from '../Quote'
 
 
 class Home extends React.Component {
@@ -32,7 +32,7 @@ class Home extends React.Component {
         <Container maxWidth="xs" style={{backgroundColor: "white", border: "solid", marginTop: "30px"}}>
           <Card />
         </Container>
-        <Container maxWidth="xs" style={{marginTop: "30px", marginBottom: "80px"}}>
+        <Container maxWidth="sm" style={{marginTop: "30px", marginBottom: "80px"}}>
           <ActionButton />
           {this.props.session 
               ? <InputForm onSubmit={onSubmit}/>

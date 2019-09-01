@@ -7,10 +7,25 @@ function stringToDate(dateString) {
   return dateArray.join('/')
 }
 
-const calcCounter = (dates) => {
+export const dateOfToday = () => {
+  const date = new Date();
+  let dd = date.getDate();
+  let mm = date.getMonth() + 1;
+  let yy = date.getFullYear();
+  
+  if (dd < 10) {
+      dd = "0" + dd;
+  }
+  if (mm < 10) {
+      mm = "0" + mm;
+  }
+  let today = dd + '/' + mm + '/' + yy;
+  return today;
+};
+
+export const calcCounter = (dates) => {
   let counter = 0
   if(!dates.length) {
-
     return counter
   }
   let tempDate, nextDate, timeDiff
@@ -18,7 +33,6 @@ const calcCounter = (dates) => {
     nextDate = new Date(stringToDate(date)).getTime()
 
     if(tempDate === undefined){
-  
       tempDate = new Date(stringToDate(date))
       return counter++
     }
@@ -26,18 +40,16 @@ const calcCounter = (dates) => {
     timeDiff = (nextDate - tempDate) / (1000 * 3600 * 24) 
     
     if(timeDiff === 0) {
-  
       return counter
     }
+
     if(timeDiff === 1) {
-  
       counter++
       tempDate = nextDate
       return counter 
     } 
     
     if(timeDiff > 1){
-  
       counter = 1
       tempDate = nextDate
       return counter 
@@ -45,9 +57,6 @@ const calcCounter = (dates) => {
   })
   return counter
 }
-
-export default calcCounter
-
 
 
 

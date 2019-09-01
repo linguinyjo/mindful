@@ -19,9 +19,9 @@ class Header extends React.Component {
       <nav className="container" style={{backgroundColor: "beige", color: "black"}}>
         <div className="nav-wrapper">
           <ul className="left">
-            <li><a href="/auth/google" style={style}>Home</a></li>
-            <li><a href="/auth/google" style={style}>About</a></li>
-            <li><a href="/auth/google" style={style}>Data</a></li>
+            <li><a href="/" style={style}>Home</a></li>
+            <li><a href="/about" style={style}>About</a></li>
+            <li><a href="/data" style={style}>Data</a></li>
           </ul>
           <ul className="right">
             {renderHeader()}

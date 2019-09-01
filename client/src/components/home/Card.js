@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import calcCounter from '../utils/counterCalc'
-import getRank from '../utils/getRank'
+import { calcCounter } from '../../utils/counterCalc'
+import getRank from '../../utils/getRank'
 import ProgressBar from './ProgressBar'
-import * as actions from '../actions'
+import * as actions from '../../actions'
 
 
 class Card extends React.Component {
