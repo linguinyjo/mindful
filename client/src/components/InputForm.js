@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Form, Field } from 'react-final-form'
 import * as actions from '../actions'
+import { Container } from '@material-ui/core';
 
 const required = value => (value ? undefined : 'Required')
 const dateFormat = value => (!value.match(/^(0[1-9]|[12][0-9]|3[01])[\- \/.](?:(0[1-9]|1[012])[\- \/.](201)[2-9]{1})$/) ? "must be valid date in format DD/MM/YYYY" : undefined)
@@ -13,18 +14,15 @@ const composeValidators = (...validators) => value =>
 
 class InputForm extends React.Component {
   render() {
-    
-    const formStyle= {
-      width: "20%", 
+    const formStyle= {  
       border: "3px solid", 
       padding: "10px 50px 10px 50px", 
       backgroundColor: "#FFDAB9",
-      position: "absolute", 
-      top: "23rem", 
-      left: "6rem"
+      
+  
     }
     return (
-      <div style={{marginTop: "50px", marginBottom: "20px"}}>
+      <div className="center" style={{marginTop: "50px", marginBottom: "20px"}}>
         <Form
           onSubmit={this.props.onSubmit}
           initialValues={{date: "31/08/2019"}}

@@ -26,17 +26,21 @@ class Home extends React.Component {
     }
     return (
       <div>
-        <ActionButton /> 
+         
         <Container style={{marginTop: "30px"}}>
           <Quote />
         </Container> 
         <Container maxWidth="xs" style={{backgroundColor: "white", border: "solid", marginTop: "30px"}}>
           <Card />
         </Container>
-        {this.props.session 
-          ? <InputForm onSubmit={onSubmit}/>
-          : null
-        }
+        <Container maxWidth="xs" style={{marginTop: "30px", marginBottom: "80px"}}>
+          <ActionButton />
+          {this.props.session 
+              ? <InputForm onSubmit={onSubmit}/>
+              : null
+          }
+        </Container>
+
       </div>
     )
   }

@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 const useStyles = makeStyles(theme => ({
   fab: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(0),
   },
   extendedIcon: {
     marginRight: theme.spacing(1),
@@ -16,9 +16,8 @@ const useStyles = makeStyles(theme => ({
 
 const CreateFab = (props) => {
   const classes = useStyles();
-  console.log(props)
   return (
-    <Fab color="primary" aria-label="add" className={classes.fab} style={{position: "fixed", top: "30rem", left: "1rem"}} > 
+    <Fab color="primary" aria-label="add" className={classes.fab} style={{position: "absolute"}} > 
       <AddIcon onClick={props.onClick}/>
     </Fab>   
     )
@@ -26,7 +25,7 @@ const CreateFab = (props) => {
 
 class FloatingActionButton extends React.Component {
   render() {
-    let currentSession = this.props.session
+    const currentSession = this.props.session
     return (
       <div>
         <CreateFab onClick={() => this.props.showSession(currentSession)}/>
